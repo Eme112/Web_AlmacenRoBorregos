@@ -1,24 +1,29 @@
-import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import NavBar from './components/NavBar';
+import Home from './components/Home'
+import Login from './components/Login'
+import Search from './components/Search'
+import MaterialInfo from './components/MaterialInfo'
+import MaterialReservation from './components/MaterialReservation'
+import AddMaterial from './components/AddMaterial'
+import RequestMaterial from './components/RequestMaterial';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+    <NavBar />
+      <Routes>
+        <Route path="/" element={<Home />}   />
+        <Route path="/" element={<Login />}   />
+        <Route path="/" element={<Search />}   />
+        <Route path="/" element={<MaterialInfo />}   />
+        <Route path="/" element={<MaterialReservation />}   />
+        <Route path="/" element={<AddMaterial />}   />
+        <Route path="/" element={<RequestMaterial />}   />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
