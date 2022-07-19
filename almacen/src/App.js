@@ -17,6 +17,7 @@ function App() {
     <BrowserRouter>
     <NavBar />
       <Routes>
+        {/* Montse: Agregar front-end de Home y Login*/}
         <Route path="/" element={<Home />}   />
         <Route path="/login" element={<Login />}   />
         <Route path="/search" element={<Search />}   />
