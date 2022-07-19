@@ -21,6 +21,7 @@ function App() {
         <Route path="/login" element={<Login />}   />
         <Route path="/search" element={<Search />}   />
         <Route path="/material-info" element={<MaterialInfo />}   />
+        {/* Emerico: Agregar front-end de MaterialReservation, AddMaterial y RequestMaterial */}
         <Route path="/material-reservation" element={<MaterialReservation />}   />
         <Route path="/add-material" element={<AddMaterial />}   />
         <Route path="/request-material" element={<RequestMaterial />}   />
