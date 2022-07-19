@@ -19,6 +19,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />}   />
         <Route path="/login" element={<Login />}   />
+        {/* Daniel: Agregar front-end de Search y MaterialInfo*/}
         <Route path="/search" element={<Search />}   />
         <Route path="/material-info" element={<MaterialInfo />}   />
         <Route path="/material-reservation" element={<MaterialReservation />}   />
