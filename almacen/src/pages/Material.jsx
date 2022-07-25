@@ -18,8 +18,6 @@ const Info= styled.div`
     cursor: pointer;
 `;
 const Container = styled.div`
-    opacity: 0;
-
     flex: 1;
     margin: 10px;
     min-width: 300px;
@@ -35,7 +33,6 @@ const Container = styled.div`
     }
 `;
 const Circle= styled.div`
-opacity: 0;
     width: 200px;
     height: 200px;
     border-radius: 50%;
