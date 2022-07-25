@@ -10,6 +10,7 @@ import MaterialInfo from './components/material-info/MaterialInfo'
 import MaterialReservation from './components/material-reservation/MaterialReservation'
 import AddMaterial from './components/add-material/AddMaterial'
 import RequestMaterial from './components/request-material/RequestMaterial';
+import SearchBar from './components/search/SearchBar';
 
 
 function App() {
@@ -20,7 +21,7 @@ function App() {
         <Route path="/" element={<Home />}   />
         <Route path="/login" element={<Login />}   />
         {/* Daniel: Agregar front-end de Search y MaterialInfo*/}
-        <Route path="/search" element={<Search />}   />
+        <Route path="/search" element = {<SearchBar/>}  />
         <Route path="/material-info" element={<MaterialInfo />}   />
         <Route path="/material-reservation" element={<MaterialReservation />}   />
         <Route path="/add-material" element={<AddMaterial />}   />
