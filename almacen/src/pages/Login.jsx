@@ -60,7 +60,7 @@ function Login() {
                 <Input placeholder="username" />
                 <Input placeholder="password" />
               <Button>INICIAR SESION</Button>
-              <Link to='/register'>CREAR CUENTA NUEVA</Link>
+              <Link to='/register' >CREAR CUENTA NUEVA</Link>
             </Form>
           </Wrapper>
         </Container>
