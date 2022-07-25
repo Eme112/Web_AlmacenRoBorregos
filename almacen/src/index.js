@@ -5,6 +5,7 @@ import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import Reservar from './pages/Reservar';
+import Materiales from './pages/Materiales';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -14,6 +15,7 @@ ReactDOM.render(
       <Route path='/login' element={<Login/>}/>
       <Route path='/register' element={<Register/>}/>
       <Route path='/reservar' element={<Reservar/>}/>
+      <Route path='/materiales' element={<Materiales/>}/>
     </Routes>
   </Router>,\
   </React.StrictMode>,

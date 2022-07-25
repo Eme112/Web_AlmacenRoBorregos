@@ -64,7 +64,7 @@ function NavBar() {
                 <Center>
                     <CenterItem><Link to='/login' color='white'>INICIAR SESION</Link></CenterItem>
                     <CenterItem><Link to='/register' color='white'>REGISTRARSE</Link></CenterItem>
-                    <CenterItem><Link to='/reservar' color='white'>RESERVAR</Link></CenterItem>
+                    <CenterItem><Link to='/materiales' color='white'>MATERIALES</Link></CenterItem>
                 </Center>
                 <Right>
                     <SearchContainer>
