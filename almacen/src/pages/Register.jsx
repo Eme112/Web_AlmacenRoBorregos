@@ -1,8 +1,8 @@
 import React from 'react'
 import Footer from '../components/Footer'
-import { Link } from 'react-router-dom';
 import NavBar from '../components/NavBar'
 import styled from "styled-components";
+
 
 const Container = styled.div`
   width: 100vw;
@@ -15,7 +15,7 @@ const Container = styled.div`
 `;
 
 const Wrapper = styled.div`
-  width: 25%;
+  width: 40%;
   padding: 20px;
   background-color: white;
 `;
@@ -27,14 +27,19 @@ const Title = styled.h1`
 
 const Form = styled.form`
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
 `;
 
 const Input = styled.input`
   flex: 1;
   min-width: 40%;
-  margin: 10px 0;
+  margin: 20px 10px 0px 0px;
   padding: 10px;
+`;
+
+const Agreement = styled.span`
+  font-size: 12px;
+  margin: 20px 0px;
 `;
 
 const Button = styled.button`
@@ -44,29 +49,33 @@ const Button = styled.button`
   background-color: teal;
   color: white;
   cursor: pointer;
-  margin-bottom: 10px;
 `;
 
-
-
-function Login() {
+function Register() {
   return (
     <div>
         <NavBar/>
-          <Container>
-            <Wrapper>
-              <Title>SIGN IN</Title>
-              <Form>
+        <Container>
+      <Wrapper>
+        <Title>CREATE AN ACCOUNT</Title>
+        <Form>
+                <Input placeholder="name" />
+                <Input placeholder="last name" />
                 <Input placeholder="username" />
+                <Input placeholder="email" />
                 <Input placeholder="password" />
-              <Button>INICIAR SESION</Button>
-              <Link to='/register' >CREAR CUENTA NUEVA</Link>
-            </Form>
-          </Wrapper>
-        </Container>
+                <Input placeholder="confirm password" />
+                <Agreement>
+                  By creating an account, I consent to the processing of my personal
+                  data in accordance with the <b>PRIVACY POLICY</b>
+                </Agreement>
+                <Button>CREATE</Button>
+              </Form>
+            </Wrapper>
+          </Container>
         <Footer/>
     </div>
   )
 }
 
-export default Login
+export default Register
