@@ -18,9 +18,11 @@ const Info= styled.div`
     cursor: pointer;
 `;
 const Container = styled.div`
+    opacity: 0;
+
     flex: 1;
-    margin: 5px;
-    min-width: 280px;
+    margin: 10px;
+    min-width: 300px;
     height: 350px;
     display: flex;
     align-items: center;
@@ -33,6 +35,7 @@ const Container = styled.div`
     }
 `;
 const Circle= styled.div`
+opacity: 0;
     width: 200px;
     height: 200px;
     border-radius: 50%;
@@ -40,6 +43,7 @@ const Circle= styled.div`
     position: absolute;
 `;
 const Image= styled.div`
+    background-color: gray;
     height: 75%;
     z-index: 2;
 `;
@@ -64,7 +68,7 @@ const Material = ({item}) => {
     return (
         <Container>
             <Circle/>
-            <Image src={item.img}/>
+                <Image src={item.img} />
             <Info>
                 <Icon>
                     <CalendarMonthIcon/>
@@ -74,7 +78,7 @@ const Material = ({item}) => {
                 </Icon>
             </Info>
         </Container>
-    )
-}
+    );
+};
 
 export default Material

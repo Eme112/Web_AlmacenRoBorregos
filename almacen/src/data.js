@@ -1,3 +1,5 @@
+import logo from './components/Integrado.png';
+
   export const sliderItems = [
     {
 
@@ -8,17 +10,37 @@
 
   ];
 
-  export const materialesLista = [
+    export const materialesLista = [
     {
       id:1,
-      img:"https://d3o2e4jr3mxnm3.cloudfront.net/Mens-Jake-Guitar-Vintage-Crusher-Tee_68382_1_lg.png",
+      img: logo,
     },
     {
       id:2,
-      img:"https://d3o2e4jr3mxnm3.cloudfront.net/Mens-Jake-Guitar-Vintage-Crusher-Tee_68382_1_lg.png",
+      img: logo,
     },
     {
       id:3,
-      img:"https://d3o2e4jr3mxnm3.cloudfront.net/Mens-Jake-Guitar-Vintage-Crusher-Tee_68382_1_lg.png",
+      img: logo,
     },
-  ]; 
+    {
+      id:4,
+      img: logo,
+    },
+    {
+      id:5,
+      img: logo,
+    },
+    {
+      id:6,
+      img: logo,
+    },
+    {
+      id:7,
+      img: logo,
+    },
+    {
+      id:8,
+      img: logo,
+    },
+  ]
