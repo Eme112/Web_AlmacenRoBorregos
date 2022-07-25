@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import Login from './pages/Login';
-import MaterialInfo from './pages/MateialInfo';
+import Register from './pages/Register';
 import Reservar from './pages/Reservar';
 
 ReactDOM.render(
@@ -12,7 +12,7 @@ ReactDOM.render(
     <Routes>
       <Route path='/' element={<App/>}/>
       <Route path='/login' element={<Login/>}/>
-      <Route path='/register' element={<MaterialInfo/>}/>
+      <Route path='/register' element={<Register/>}/>
       <Route path='/reservar' element={<Reservar/>}/>
     </Routes>
   </Router>,\
