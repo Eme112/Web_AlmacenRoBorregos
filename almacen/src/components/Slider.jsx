@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import logo from './Integrado.png';
 import logo2 from './roborregos.png';
 
+
 const Container = styled.div`
     width: 100%;
     height: 100vh;
@@ -69,9 +70,10 @@ const Desc = styled.p`
 const Button = styled.button`
   padding: 10px;
   font-size: 20px;
-  background-color: transparent;
+  background-color: teal;
   cursor: pointer;
   color: white;
+  border: 2px solid white;
 `;
 function Slider() {
 /*  const handleClick = (direction) => {
