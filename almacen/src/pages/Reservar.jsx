@@ -6,6 +6,7 @@ function Reservar() {
   return (
     <div>
      <NavBar/>
+     Pagina de Reserva
      <Footer/>
     </div>
   )

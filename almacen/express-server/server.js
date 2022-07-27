@@ -7,52 +7,26 @@
 
 ////////////////////////////// DEPENDENCIES //////////////////////////////
 var express = require("express");
-var cors = require("cors")
+var cors = require("cors");
+const dotenv = require("dotenv");
+const mongoose = require("mongoose");
+const Material = require("./model/materials");
+
+dotenv.config();
 
 // SETUP EXPRESS APP
 var app = express();
 var PORT = process.env.PORT || 4000;
 
+mongoose.connect(process.env.MONGODB_HOST, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+}).then(db => console.log("DB is connected")).catch(err => console.log(err));
+
 // HANDLE DATA PARSINT EXPRESS
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(cors())
-
-////////////////////////////// INITIAL DATA //////////////////////////////
-var materials = [
-    {
-        routeName: "objeto1",
-        name: "Objeto 1",
-        cant: 1,
-        locker: 10,
-        available: true,
-        datasheet: ""
-    },
-    {
-        routeName: "objeto2",
-        name: "Objeto 2",
-        cant: 2,
-        locker: 20,
-        available: true,
-        datasheet: ""
-    },
-    {
-        routeName: "objeto3",
-        name: "Objeto 3",
-        cant: 3,
-        locker: 30,
-        available: true,
-        datasheet: ""
-    },
-    {
-        routeName: "objeto0",
-        name: "Objeto 0",
-        cant: 0,
-        locker: 0,
-        available: false,
-        datasheet: ""
-    }
-];
 
 ////////////////////////////// ROUTES //////////////////////////////
 // Basic route that sends the user first to the AJAX Page
@@ -61,27 +35,27 @@ app.get("/", function(req, res) {
 });
 
 // Displays materials
-app.get("/api/materials", function(req, res) {
-    return res.json(materials);
+app.get("/api/materials", async function(req, res) {
+    const mat = await Material.find();
+    return res.json(mat);
 });
 
 // Displays a single material, or returns false
-app.get("/api/materials/:material", function(req, res) {
+app.get("/api/materials/:material", async function(req, res) {
     var chosen = req.params.material;
   
     console.log(chosen);
   
-    for (var i = 0; i < materials.length; i++) {
-      if (chosen === materials[i].routeName) {
-        return res.json(materials[i]);
-      }
-    }
-  
-    return res.json(false);
+    const mat = await Material.findOne({routeName:chosen});
+    if (mat) {
+        return res.json(mat);
+    } else {
+        return res.json(`No se encontró el material ${chosen}`);
+    }    
 });
 
 // Add material - takes in JSON input
-app.post("/api/materials", function(req, res) {
+app.post("/api/materials", async function(req, res) {
     // req.body hosts is equal to the JSON post sent from the user
     // This works because of our body parsing middleware
     var addedMaterial = req.body;
@@ -90,9 +64,10 @@ app.post("/api/materials", function(req, res) {
     // You can read more about RegEx Patterns later https://www.regexbuddy.com/regex.html
     addedMaterial.routeName = addedMaterial.name.replace(/\s+/g, "").toLowerCase();
 
+    const mat = new Material(addedMaterial);
+    await mat.save().catch(err => console.log(err));
+    console.log("Material added");
     console.log(addedMaterial);
-
-    materials.push(addedMaterial);
 
     res.json(addedMaterial);
 });
@@ -101,4 +76,3 @@ app.post("/api/materials", function(req, res) {
 app.listen(PORT, function() {
 console.log("App listening on PORT " + PORT);
 });
-  
