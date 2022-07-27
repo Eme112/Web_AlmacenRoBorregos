@@ -2,7 +2,7 @@ import React from 'react'
 import Footer from '../components/Footer'
 import NavBar from '../components/NavBar'
 
-function Login() {
+function MaterialInfo() {
   return (
     <div>
         <NavBar/>
@@ -11,4 +11,4 @@ function Login() {
   )
 }
 
-export default Login
+export default MaterialInfo
