@@ -1,8 +1,8 @@
 import { ArrowLeftOutlined, ArrowRightOutlined } from '@mui/icons-material'
 import React from 'react'
 import styled from 'styled-components'
-import { sliderItems } from "../data";
-import { useState } from "react";
+import logo from './Integrado.png';
+import logo2 from './roborregos.png';
 
 
 const Container = styled.div`
@@ -29,13 +29,11 @@ const Arrow = styled.div`
   margin: auto;
   cursor: pointer;
   opacity: 0.5;
-  z-index: 1;
+
 `
 const Wrapper = styled.div`
   height: 100%;
   display: flex;
-  transition: all 1.5s ease;
-  transform: translateX(${(props) => props.slideIndex * -100}vw);
 `
 const Slide = styled.div`
   width: 100vw;
@@ -51,12 +49,6 @@ const ImgContainer = styled.div`
 
 const Image = styled.img`
   height: 80%;
-  faded :faded-top;
-  faded :faded-bottom;
-  faded :faded-left;
-  faded :faded-right;
-  faded :faded-bottom faded-left;
-  faded :faded-top faded-right;
 `
 const InfoContainer = styled.div`
   flex: column;
@@ -84,34 +76,40 @@ const Button = styled.button`
   border: 2px solid white;
 `;
 function Slider() {
-  const [slideIndex, setSlideIndex] = useState(0);
-  const handleClick = (direction) => {
+/*  const handleClick = (direction) => {
     if (direction === "left") {
-      setSlideIndex(slideIndex > 0 ? slideIndex - 1 : 1);
+      setSlideIndex(slideIndex > 0 ? slideIndex - 1 : 2);
     } else {
-      setSlideIndex(slideIndex < 1 ? slideIndex + 1 : 0);
+      setSlideIndex(slideIndex < 2 ? slideIndex + 1 : 0);
     }
   };
- 
+*/  
   return (
     <Container>
-      <Arrow direction="left" onClick={()=>handleClick("left")}>
+      <Arrow direction="left" /*onClick={()=>handleClick("left")}*/>
         <ArrowLeftOutlined/>
       </Arrow>
-      <Wrapper slideIndex={slideIndex}>
-      {sliderItems.map((item) => (        
-        <Slide bg={item.bg} key={item.id}>
+      <Wrapper>
+        <Slide bg="1F4690">
             <ImgContainer>
-              <Image src={item.img}/>
+              <Image src={logo} alt="Logo"/>
             </ImgContainer>
-              <Title>{item.title}</Title>
-              <Desc>{item.desc}</Desc>
-              <Button>{item.butt}</Button>
+              <Title>RESERVAR TL081</Title>
+              <Desc>STOCK: 10</Desc>
+              <Button>RESERVAR</Button>
             <InfoContainer></InfoContainer>
         </Slide>
-        ))}
+        <Slide bg="#6c4d91">
+            <ImgContainer>
+              <Image src={logo2} alt="Logo"/>
+            </ImgContainer>
+              <Title>RESERVAR TL081</Title>
+              <Desc>STOCK: 10</Desc>
+              <Button>RESERVAR</Button>
+            <InfoContainer></InfoContainer>
+        </Slide>
       </Wrapper>
-      <Arrow direction="right" onClick={()=>handleClick("right")}>
+      <Arrow direction="right" /*onClick={()=>handleClick("right")}*/>
         <ArrowRightOutlined/>
       </Arrow>
     </Container>

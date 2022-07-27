@@ -58,13 +58,13 @@ function NavBar() {
             <Wrapper>
                 <Left>
                     <HomePage>
-                       <Link to='/' color='white'> <b>HOME</b></Link>
+                       <Link to='/'> <b>HOME</b></Link>
                     </HomePage>
                 </Left>
                 <Center>
-                    <CenterItem><Link to='/login' color='white'>INICIAR SESION</Link></CenterItem>
-                    <CenterItem><Link to='/register' color='white'>REGISTRARSE</Link></CenterItem>
-                    <CenterItem><Link to='/materiales' color='white'>MATERIALES</Link></CenterItem>
+                    <CenterItem><Link to='/login'>INICIAR SESION</Link></CenterItem>
+                    <CenterItem><Link to='/register'>REGISTRARSE</Link></CenterItem>
+                    <CenterItem><Link to='/materiales'>MATERIALES</Link></CenterItem>
                 </Center>
                 <Right>
                     <SearchContainer>

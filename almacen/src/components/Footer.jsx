@@ -49,6 +49,18 @@ const Title = styled.h3`
     margin-bottom: 30px;
 `
   
+const List = styled.ul`
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+`
+  
+const ListItem = styled.li`
+    width: 50%;
+    margin-bottom: 10px;
+`
   
 const Right = styled.div`
     flex: 1;
@@ -62,17 +74,18 @@ const ContactItem = styled.div`
 `
   
 
+
+
 function Footer() {
   return (
     <Container>
       <Left>
         <Logo>RoBorregos</Logo>
         <Desc>
-            Pagina de RoBorregos para administracion y reserva de materiales electronicos.
-            Uso exclusivo de personas pertenecientes al grupo estudiantil.
+          There are many variations of passages of Lorem Ipsum available, but
+          the majority have suffered alteration in some form, by injected
+          humour, or randomised words which don’t look even slightly believable.
         </Desc>
-      </Left>
-      <Center>        
         <SocialContainer>
           <SocialIcon color="3B5999">
             <FacebookIcon />
@@ -84,6 +97,21 @@ function Footer() {
             <TwitterIcon />
           </SocialIcon>
         </SocialContainer>
+      </Left>
+      <Center>
+        <Title>Useful Links</Title>
+        <List>
+          <ListItem>Home</ListItem>
+          <ListItem>Cart</ListItem>
+          <ListItem>Man Fashion</ListItem>
+          <ListItem>Woman Fashion</ListItem>
+          <ListItem>Accessories</ListItem>
+          <ListItem>My Account</ListItem>
+          <ListItem>Order Tracking</ListItem>
+          <ListItem>Wishlist</ListItem>
+          <ListItem>Wishlist</ListItem>
+          <ListItem>Terms</ListItem>
+        </List>
       </Center>
       <Right>
         <Title>Contact</Title>
