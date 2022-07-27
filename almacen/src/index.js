@@ -6,6 +6,7 @@ import Login from './pages/Login';
 import Register from './pages/Register';
 import Reservar from './pages/Reservar';
 import Materiales from './pages/Materiales';
+import RegistrarAlmacen from './pages/RegistrarAlmacen';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -16,8 +17,9 @@ ReactDOM.render(
       <Route path='/register' element={<Register/>}/>
       <Route path='/reservar' element={<Reservar/>}/>
       <Route path='/materiales' element={<Materiales/>}/>
+      <Route path='/registrarmateriales' element={<RegistrarAlmacen/>}/>
     </Routes>
-  </Router>,\
+  </Router>
   </React.StrictMode>,
   document.getElementById('root')
 );

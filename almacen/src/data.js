@@ -1,5 +1,7 @@
 import logo from './components/Integrado.png';
 import logo2 from './components/roborregos.png';
+
+
 export const sliderItems = [
   {
     id: 1,
@@ -7,7 +9,8 @@ export const sliderItems = [
     title: "RESERVAR TL081",
     desc: "STOCK: 10",
     bg: "1F4690",
-    butt: "RESERVAR"
+    butt: "RESERVAR",
+    link: '/materiales'
   },
   {
     id: 2,
@@ -15,7 +18,8 @@ export const sliderItems = [
     title: "UNETE AL EQUIPO",
     desc: "Estamos recibiendo solicitudes",
     bg: "5e388d",
-    butt: "CONTACTAR"
+    butt: "CONTACTAR",
+    link: '/registrarmateriales'
   },
 
 ];
