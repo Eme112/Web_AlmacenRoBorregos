@@ -1,4 +1,11 @@
-import logo from './components/Integrado.png';
+import Arduino from './components/Arduino.png';
+import Rasp from './components/Rasp.png';
+import And from './components/And.png';
+import Or from './components/Or.png';
+import Not from './components/Not.png';
+import Transistor from './components/Transistor.png';
+import Diode from './components/Diode.png';
+import Resistor from './components/Resistor.png';
 
   export const sliderItems = [
     {
@@ -13,34 +20,50 @@ import logo from './components/Integrado.png';
     export const materialesLista = [
     {
       id:1,
-      img: logo,
+      img: Arduino,
+      title: "Microcontrollers: ",
+      subtitle: "Arduino",
     },
     {
       id:2,
-      img: logo,
+      img: Rasp,
+      title: "Microcontrollers: ",
+      subtitle: "Raspberry PI 3",
     },
     {
       id:3,
-      img: logo,
+      img: And,
+      title: "Logic gates: ",
+      subtitle: "AND SN74AS11N",
     },
     {
       id:4,
-      img: logo,
+      img: Or,
+      title: "Logic gates: ",
+      subtitle: "OR SN74AHC32N",
     },
     {
       id:5,
-      img: logo,
+      img: Not,
+      title: "Logic gates: ",
+      subtitle: "NOT SN74HC05N",
     },
     {
       id:6,
-      img: logo,
+      img: Transistor,
+      title: "Transistors: ",
+      subtitle: "PNP",
     },
     {
       id:7,
-      img: logo,
+      img: Diode,
+      title: "Diodes: ",
+      subtitle: "Rectifier",
     },
     {
       id:8,
-      img: logo,
+      img: Resistor,
+      title: "Resistors",
+      subtitle: "",
     },
   ]

@@ -1,6 +1,5 @@
 import styled from "styled-components"
-import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
-import InfoIcon from '@mui/icons-material/Info';
+import QuestionMarkIcon from '@mui/icons-material/QuestionMark';
 
 const Info= styled.div`
     opacity: 0;
@@ -16,7 +15,7 @@ const Info= styled.div`
     justify-content: center;
     transition: all 0.8 s ease;
     cursor: pointer;
-`;
+`
 const Container = styled.div`
     flex: 1;
     margin: 10px;
@@ -25,25 +24,30 @@ const Container = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: gray;
+    background-color: #D4E9FC;
     position: relative;
+    flex-direction: column;
 
     &:hover ${Info}{
         opacity: 1;
     }
-`;
+`
 const Circle= styled.div`
     width: 200px;
     height: 200px;
     border-radius: 50%;
-    background-color: white;
+    background-color: #E9F3FD;
     position: absolute;
-`;
-const Image= styled.div`
-    background-color: gray;
+`
+const Image= styled.img`
+    display: flex;
+    justify-content: center;
+    align-content: center;
     height: 75%;
+    width: 75%;
+    object-fit: scale-down;
     z-index: 2;
-`;
+`
 const Icon= styled.div`
     width: 40px;
     height: 40px;
@@ -59,21 +63,31 @@ const Icon= styled.div`
         background-color: white;
         transform: scale(1.1)
     }
-`;
+`
+const Title= styled.p`
+    z-index: 3;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+`
+const Subtitle= styled.p`
+    z-index: 3;
+    text-align: center;
+    font-size: 15px;
+    font-color: blue;
+`
 
 const Material = ({item}) => {
     return (
         <Container>
-            <Circle/>
-                <Image src={item.img} />
+            <Image src={item.img} />
             <Info>
                 <Icon>
-                    <CalendarMonthIcon/>
-                </Icon>
-                <Icon>
-                    <InfoIcon/>
+                    <QuestionMarkIcon/>
                 </Icon>
             </Info>
+            <Title> {item.title} </Title>
+            <Subtitle> {item.subtitle} </Subtitle>
         </Container>
     );
 };
