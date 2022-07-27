@@ -4,6 +4,7 @@ import App from './App';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import Login from './pages/Login';
 import MaterialInfo from './pages/MateialInfo';
+import Materiales from './pages/Materiales';
 import Reservar from './pages/Reservar';
 
 /*const express = require("express");
@@ -26,7 +27,7 @@ ReactDOM.render(
       <Route path='/' element={<App/>}/>
       <Route path='/login' element={<Login/>}/>
       <Route path='/register' element={<MaterialInfo/>}/>
-      <Route path='/reservar' element={<Reservar/>}/>
+      <Route path='/materiales' element={<Materiales/>}/>
     </Routes>
   </Router>,\
   </React.StrictMode>,
