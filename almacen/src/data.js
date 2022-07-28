@@ -11,7 +11,6 @@ import Diode from './components/Diode.png';
 import Resistor from './components/Resistor.png';
 
 
-
 export const materialesLista = [
     {
       id:1,
