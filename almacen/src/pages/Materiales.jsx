@@ -21,6 +21,7 @@ function Materiales() {
                 <Material item={item} key={item.id}/>
             ))}
         </Container>
+
         <Footer/>
     </div>
   )
