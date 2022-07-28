@@ -1,6 +1,6 @@
+
 import logo from './components/Integrado.png';
 import logo2 from './components/roborregos.png';
-
 import Arduino from './components/Arduino.png';
 import Rasp from './components/Rasp.png';
 import And from './components/And.png';
@@ -9,6 +9,8 @@ import Not from './components/Not.png';
 import Transistor from './components/Transistor.png';
 import Diode from './components/Diode.png';
 import Resistor from './components/Resistor.png';
+
+
 
 export const materialesLista = [
     {
@@ -79,4 +81,3 @@ export const sliderItems = [
     butt: "CONTACTAR"
   },
 ]
-
